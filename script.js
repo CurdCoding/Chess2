@@ -700,7 +700,6 @@ function rook(){
         for(let d = 0; d < counter; d++){
             if(valArray[allBlackMoves[d]] == 10){
                 whiteCheck = true;
-                alert(allBlackMoves[d]);
                 break;
             }
         }
@@ -749,7 +748,6 @@ function rook(){
            else
            whiteCheck = false;
         }
-        alert(whiteCheck + "    "+ valArray[42]);
         if(whiteCheck == false){
             thirdLegalMoves[counter2++] = secondLegalMoves[g]; 
         }
