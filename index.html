@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chess 2.0</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="moveSound" src="sounds/moveSound.mp3" preload="auto"></audio>
+    <audio id="captureSound" src="sounds/captureSound.mp3" preload="auto"></audio>
+    <audio id="castleSound" src="sounds/castleSound.mp3" preload="auto"></audio>
+    <audio id="checkSound" src="sounds/checkSound.mp3" preload="auto"></audio>
+
+    <div class="board">
+        <button class="white" id="square" onclick="box = 0; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="black" id="square" onclick="box = 1; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="white" id="square" onclick="box = 2; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="black" id="square" onclick="box = 3; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="white" id="square" onclick="box = 4; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="black" id="square" onclick="box = 5; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="white" id="square" onclick="box = 6; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="black" id="square" onclick="box = 7; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <br>
+        <button class="black" id="square" onclick="box = 8; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="white" id="square" onclick="box = 9; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="black" id="square" onclick="box = 10; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="white" id="square" onclick="box = 11; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="black" id="square" onclick="box = 12; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="white" id="square" onclick="box = 13; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="black" id="square" onclick="box = 14; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="white" id="square" onclick="box = 15; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <br>
+        <button class="white" id="square" onclick="box = 16; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="black" id="square" onclick="box = 17; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="white" id="square" onclick="box = 18; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="black" id="square" onclick="box = 19; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="white" id="square" onclick="box = 20; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="black" id="square" onclick="box = 21; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="white" id="square" onclick="box = 22; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="black" id="square" onclick="box = 23; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <br>
+        <button class="black" id="square" onclick="box = 24; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="white" id="square" onclick="box = 25; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="black" id="square" onclick="box = 26; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="white" id="square" onclick="box = 27; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="black" id="square" onclick="box = 28; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="white" id="square" onclick="box = 29; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="black" id="square" onclick="box = 30; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="white" id="square" onclick="box = 31; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <br>
+        <button class="white" id="square" onclick="box = 32; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="black" id="square" onclick="box = 33; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="white" id="square" onclick="box = 34; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="black" id="square" onclick="box = 35; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="white" id="square" onclick="box = 36; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="black" id="square" onclick="box = 37; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="white" id="square" onclick="box = 38; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="black" id="square" onclick="box = 39; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <br>
+        <button class="black" id="square" onclick="box = 40; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="white" id="square" onclick="box = 41; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="black" id="square" onclick="box = 42; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="white" id="square" onclick="box = 43; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="black" id="square" onclick="box = 44; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="white" id="square" onclick="box = 45; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="black" id="square" onclick="box = 46; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="white" id="square" onclick="box = 47; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <br>
+        <button class="white" id="square" onclick="box = 48; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="black" id="square" onclick="box = 49; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="white" id="square" onclick="box = 50; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="black" id="square" onclick="box = 51; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="white" id="square" onclick="box = 52; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="black" id="square" onclick="box = 53; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="white" id="square" onclick="box = 54; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="black" id="square" onclick="box = 55; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <br>
+        <button class="black" id="square" onclick="box = 56; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="white" id="square" onclick="box = 57; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="black" id="square" onclick="box = 58; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="white" id="square" onclick="box = 59; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="black" id="square" onclick="box = 60; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="white" id="square" onclick="box = 61; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="black" id="square" onclick="box = 62; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+        <button class="white" id="square" onclick="box = 63; mechanics();"><img src="Images/transparent.png" class="images" id="piece"></button>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

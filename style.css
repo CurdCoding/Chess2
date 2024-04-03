@@ -1,0 +1,29 @@
+body{
+    background-color: black;
+}
+.board{
+    background-color: white;
+    height: 676px;
+    width: 676px;
+    margin-left: 25%;
+    margin-top: 2%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.white,.black{
+    height: 84.5px;
+    width: 84.5px;
+    border: none;
+    margin: none;
+}
+.white{
+    background-color: white;
+}
+.black{
+    background-color: rgb(50, 149, 168);
+}
+.images{
+    height: 82px;
+    width: 82px;
+    margin-left: -2px;
+}
