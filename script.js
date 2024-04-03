@@ -740,7 +740,7 @@ function rook(){
                 box = secondBox;
             }
         }
-        for(let n = 0; n < counter; n++){
+        for(let n = 0; n < counter2; n++){
             if(legalMoves[n] == 10){
                 whiteCheck = true;
                 break;
