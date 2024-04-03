@@ -748,9 +748,8 @@ function rook(){
            else
            whiteCheck = false;
         }
-        if(whiteCheck == false){
+        
             thirdLegalMoves[counter2++] = secondLegalMoves[g]; 
-        }
         valArray[box] = secondValue;
         valArray[boxStorer] = thirdValue;
     }
